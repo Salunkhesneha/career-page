@@ -22,6 +22,54 @@ body {
     line-height: 1.6;
 }
 
+/* Add these styles to your contact.css */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--card-bg);
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .mobile-menu-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 24px;
+        width: 30px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+    
+    .mobile-menu-btn span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: var(--text);
+        transition: all 0.3s ease;
+    }
+    
+    .mobile-menu-btn.active span:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+    }
+    
+    .mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-menu-btn.active span:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+}
 
 .contact-container {
     margin-top: 150px; 
