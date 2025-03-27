@@ -25,11 +25,20 @@ body {
     line-height: 1.5;
     padding: 1rem;
 }
+section {
+    margin-bottom: 2rem;
+}
+
+
+.navbar {
+    margin-bottom: 2rem; 
+}
 
 .auth-container {
     width: 100%;
     max-width: 28rem;
     margin: 0 auto;
+    margin-top: 2rem;
 }
 
 .auth-card {
@@ -109,5 +118,14 @@ body {
 @media (max-width: 640px) {
     .auth-card {
         padding: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .navbar {
+        margin-bottom: 3rem; /* More space on larger screens */
+    }
+    .auth-container {
+        margin-top: 3rem;
     }
 }
