@@ -20,7 +20,7 @@ body {
     background-color: var(--bg);
     display: grid;
     place-items: center;
-    min-height: 120vh;
+    min-height: 100vh;
     color: var(--text);
     line-height: 1.5;
     padding: 1rem;
@@ -30,6 +30,7 @@ body {
     width: 100%;
     max-width: 28rem;
     margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .auth-card {
@@ -38,8 +39,8 @@ body {
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     padding: 2.5rem;
     border: 1px solid var(--border);
+    width: 100%;
 }
-
 
 .auth-header {
     text-align: center;
@@ -79,7 +80,7 @@ body {
     padding: 0.75rem 1rem;
     border: 1px solid var(--border);
     border-radius: 0.5rem;
-    font-size: 0.875rem;
+    font-size: 1rem;
     transition: all 0.2s;
     background-color: var(--card-bg);
 }
@@ -95,43 +96,31 @@ body {
     right: 1rem;
     top: 50%;
     transform: translateY(-50%);
-    width: 1.25rem;
-    height: 1.25rem;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2364748b'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M15 12a3 3 0 11-6 0 3 3 0 016 0z'/%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z'/%3E%3C/svg%3E");
+    width: 1.5rem;
+    height: 1.5rem;
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
-}
-
-.toggle-pw.visible {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2364748b'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L14 14'/%3E%3C/svg%3E");
 }
 
 .auth-options {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1.5rem 0;
     font-size: 0.875rem;
+    margin: 1rem 0;
 }
 
 .remember-option {
     display: flex;
-    width: 15vw;
     align-items: center;
     gap: 8px;
-}
-
-.remember-option input[type="checkbox"] {
-    margin: 0;
     width: auto;
 }
 
-.remember-option label {
+.remember-option input {
     margin: 0;
-    padding: 0;
-    display: inline;
-    font-weight: normal;
+    width: auto;
 }
 
 .forgot-pw {
@@ -147,12 +136,11 @@ body {
     color: white;
     border: none;
     border-radius: 0.5rem;
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.2s;
 }
-
 
 .auth-btn:hover {
     background-color: var(--primary-dark);
@@ -160,10 +148,9 @@ body {
 
 .auth-footer {
     text-align: center;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     font-size: 0.875rem;
     color: var(--light-text);
-    margin-bottom: 1.5rem;
 }
 
 .auth-footer a {
@@ -172,8 +159,37 @@ body {
     text-decoration: none;
 }
 
-@media (max-width: 640px) {
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .auth-card {
+        padding: 2rem;
+    }
+    .auth-options {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+    .auth-btn {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
     .auth-card {
         padding: 1.5rem;
+    }
+    .auth-header h2 {
+        font-size: 1.25rem;
+    }
+    .auth-header p {
+        font-size: 0.8rem;
+    }
+    .input-field input {
+        font-size: 0.9rem;
+        padding: 0.7rem;
+    }
+    .auth-btn {
+        font-size: 0.9rem;
+        padding: 0.7rem;
     }
 }
