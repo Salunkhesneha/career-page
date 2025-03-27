@@ -18,19 +18,21 @@
 
 body {
     background-color: var(--bg);
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
     color: var(--text);
     line-height: 1.5;
     padding: 1rem;
+    overflow: hidden; /* Prevents scrolling */
 }
 
 .auth-container {
     width: 100%;
-    max-width: 28rem;
-    margin: 0 auto;
+    max-width: 36rem;
     padding: 0 1rem;
+    padding: 1rem;
 }
 
 .auth-card {
@@ -107,26 +109,30 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: nowrap;
     font-size: 0.875rem;
     margin: 1rem 0;
+    gap: 1rem;
+    width: 100%;
 }
 
 .remember-option {
     display: flex;
     align-items: center;
-    gap: 8px;
-    width: auto;
+    gap: 0.5rem;
+    white-space:nowrap;
+    flex: 1;
 }
 
 .remember-option input {
     margin: 0;
-    width: auto;
 }
 
 .forgot-pw {
     color: var(--primary);
     text-decoration: none;
     font-weight: 500;
+    white-space: nowrap;
 }
 
 .auth-btn {
@@ -140,6 +146,7 @@ body {
     font-weight: 500;
     cursor: pointer;
     transition: all 0.2s;
+    margin-top: 1rem; /* Adds space between the button and the auth-options */
 }
 
 .auth-btn:hover {
@@ -148,7 +155,7 @@ body {
 
 .auth-footer {
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 1.5rem; /* Adds space between the button and the footer text */
     font-size: 0.875rem;
     color: var(--light-text);
 }
@@ -161,20 +168,39 @@ body {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+    .auth-container {
+        max-width: 85vw;
+    }
+
+    .auth-options {
+        display: flex;
+        justify-content: space-between;
+    }
+}
     .auth-card {
         padding: 2rem;
-    }
-    .auth-options {
-        flex-direction: column;
-        gap: 1rem;
-        align-items: flex-start;
     }
     .auth-btn {
         font-size: 1rem;
     }
+
+
+@media (max-width: 1024px) {
+    .auth-container {
+        max-width: 75vw; /* Adjust width for mid-sized screens */
+    }
 }
 
 @media (max-width: 480px) {
+    .auth-container {
+        max-width: 90vw; /* Adjust width for mobile */
+    }
+
+    .auth-options {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0.5rem;
+    }
     .auth-card {
         padding: 1.5rem;
     }
