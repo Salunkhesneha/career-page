@@ -27,6 +27,7 @@ About us Cs*/
         }
 
         .container {
+            margin-top: 380px; 
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
@@ -108,7 +109,7 @@ About us Cs*/
 
         /* Hero Section */
         .hero {
-            padding: 180px 0 100px;
+            padding: 220px 0 100px;
             background: linear-gradient(135deg, var(--secondary-dark) 0%, var(--secondary) 100%);
             color: white;
         }
