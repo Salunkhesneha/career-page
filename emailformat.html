@@ -27,11 +27,15 @@
             line-height: 1.6;
             margin: 0;
             padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
 
         .email-container {
             max-width: 600px;
-            margin: 0 auto;
+            width: 100%;
             background-color: var(--white);
             border-radius: 12px;
             overflow: hidden;
@@ -41,7 +45,7 @@
 
         .email-header {
             background-color: var(--secondary-dark);
-            padding: 30px;
+            padding: 20px;
             text-align: center;
         }
 
@@ -71,12 +75,14 @@
             color: var(--secondary-dark);
             font-size: 1.8rem;
             margin-bottom: 25px;
+            text-align: center;
         }
 
         p {
             margin-bottom: 20px;
             color: var(--text);
             font-size: 1rem;
+            text-align: center;
         }
 
         .action-button-container {
@@ -94,6 +100,7 @@
             font-weight: 600;
             font-size: 1rem;
             transition: all 0.3s ease;
+            text-align: center;
         }
 
         .reset-button:hover {
@@ -112,26 +119,28 @@
             color: var(--text-light);
             font-size: 0.95rem;
             text-align: center;
-            margin-top: 30px;
+            margin-top: 20px;
         }
 
         .email-footer {
-            margin-top: 40px;
-            padding-top: 30px;
+            margin-top: 30px;
+            padding-top: 20px;
             border-top: 1px solid var(--border);
+            text-align: center;
         }
 
         .trouble-text {
-            margin: 25px 0;
-            padding: 20px;
+            margin: 20px 0;
+            padding: 15px;
             background-color: var(--background-alt);
             border-radius: 8px;
             font-size: 0.9rem;
+            text-align: center;
         }
 
         .plain-url {
             display: block;
-            word-break: break-all;
+            word-break: break-word;
             color: var(--primary);
             text-decoration: none;
             margin-top: 10px;
@@ -147,20 +156,44 @@
             text-align: center;
             color: var(--text-light);
             font-size: 0.85rem;
-            margin-top: 30px;
+            margin-top: 20px;
         }
 
+        /* Mobile Responsive Styles */
         @media (max-width: 640px) {
+            body {
+                padding: 10px;
+            }
+
+            .email-container {
+                width: 100%;
+                border-radius: 8px;
+            }
+
             .email-content {
-                padding: 30px 20px;
+                padding: 25px;
             }
             
             h1 {
                 font-size: 1.5rem;
             }
-            
+
             .reset-button {
-                padding: 12px 25px;
+                display: block;
+                width: 100%;
+                text-align: center;
+                padding: 12px;
+                font-size: 1rem;
+            }
+
+            .trouble-text {
+                font-size: 0.85rem;
+                padding: 12px;
+            }
+
+            .plain-url {
+                font-size: 0.8rem;
+                word-break: break-word;
             }
         }
     </style>
@@ -194,8 +227,8 @@
                 
                 <div class="trouble-text">
                     <p>If you're having trouble clicking the "Reset Password" button, copy and paste the URL below into your web browser:</p>
-                    <a href="http://localhost:8000/password/reset/986c2174c7994a84cc536b065300a0290567acef49308a19fbeabebcf5b7c3de?email=garland.greenholt%40example.org" class="plain-url">
-                        http://localhost:8000/password/reset/986c2174c7994a84cc536b065300a0290567acef49308a19fbeabebcf5b7c3de?email=garland.greenholt%40example.org
+                    <a href="http://localhost:8000/password/reset/..." class="plain-url">
+                        http://localhost:8000/password/reset/...
                     </a>
                 </div>
                 
