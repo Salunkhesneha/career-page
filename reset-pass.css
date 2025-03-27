@@ -1,9 +1,7 @@
-
 :root {
     --primary: #06b6d4;
     --primary-dark: #0891b2;
     --secondary: #0f172a;
-    --secondary-dark: #020617;
     --background: #f8fafc;
     --background-alt: #f1f5f9;
     --text: #334155;
@@ -21,60 +19,74 @@
 
 body {
     background-color: var(--background);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
     color: var(--text);
+    line-height: 1.5;
+    padding: 1rem;
+}
+
+.navbar {
+    background-color: var(--secondary);
+    color: var(--white);
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 2rem; /* Space between navbar and form */
 }
 
 .reset-container {
-    width: 100%;
-    max-width: 480px;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 4rem); /* Adjust height considering navbar and padding */
 }
 
 .reset-card {
     background-color: var(--white);
     border-radius: 12px;
-    padding: 40px;
+    padding: 2.5rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     border: 1px solid var(--border);
+    width: 100%;
+    max-width: 480px;
 }
 
 .reset-header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
 }
 
 .reset-header h1 {
     font-size: 1.5rem;
-    color: #000000;
+    color: var(--secondary);
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.reset-header p {
+    color: var(--text-light);
+    font-size: 0.875rem;
 }
 
 .reset-form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 0.5rem;
 }
 
 .form-group label {
     font-weight: 500;
-    color: #000000;
-    font-size: 0.9rem;
+    color: var(--secondary);
+    font-size: 0.875rem;
 }
 
 .email-display {
     background-color: var(--background-alt);
-    padding: 12px 16px;
+    padding: 0.75rem 1rem;
     border-radius: 8px;
     font-size: 0.95rem;
     color: var(--text);
@@ -87,10 +99,11 @@ body {
 
 .input-wrapper input {
     width: 100%;
-    padding: 12px 16px;
+    padding: 0.75rem 1rem;
     border: 1px solid var(--border);
     border-radius: 8px;
     font-size: 0.95rem;
+    background-color: var(--white);
     transition: all 0.3s ease;
 }
 
@@ -102,7 +115,7 @@ body {
 
 .password-toggle {
     position: absolute;
-    right: 15px;
+    right: 1rem;
     top: 50%;
     transform: translateY(-50%);
     color: var(--text-light);
@@ -112,16 +125,16 @@ body {
 
 .reset-btn {
     width: 100%;
-    padding: 12px;
+    padding: 0.75rem;
     background-color: var(--primary);
-    color: white;
+    color: var(--white);
     border: none;
     border-radius: 8px;
     font-size: 0.95rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-top: 10px;
+    margin-top: 0.5rem;
 }
 
 .reset-btn:hover {
@@ -132,7 +145,7 @@ body {
 
 @media (max-width: 480px) {
     .reset-card {
-        padding: 30px 20px;
+        padding: 2rem 1.5rem;
     }
 
     .reset-header h1 {
