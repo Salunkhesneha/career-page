@@ -184,7 +184,28 @@ body {
         font-size: 1rem;
     }
 
+   @media (min-width: 1024px) {
+    .auth-container {
+        max-width: 45vw; /* Increased container width */
+    }
+    .auth-card {
+        padding: 3rem; /* More padding for balance */
+        width: 100%;
+    }
+    .input-field input {
+        padding: 1rem; /* Bigger input fields */
+        font-size: 1.1rem;
+    }
+    .auth-options {
+        font-size: 1rem; /* Slightly bigger text */
+    }
+    .auth-btn {
+        font-size: 1.1rem;
+        padding: 1rem;
+    }
+}
 
+    
 @media (max-width: 1024px) {
     .auth-container {
         max-width: 75vw; /* Adjust width for mid-sized screens */
