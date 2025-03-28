@@ -54,10 +54,6 @@ ul {
     list-style: none;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
 
 .section-header {
     text-align: center;
@@ -199,19 +195,8 @@ header .container {
     align-items: center;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: white;
-}
 
-.logo i {
-    font-size: 1.8rem;
-    margin-right: 10px;
-    color: var(--primary);
-}
+
 
 .nav-links {
     display: flex;
@@ -1086,22 +1071,9 @@ footer {
             align-items: center;
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            height: 10%;
-            gap: 10px;
-            color: white;
-            font-size: 1.5rem;
-            font-weight: 600;
-            text-decoration: none;
-        }
-
-        .logo i {
-            font-size: 1.8rem;
-            color: var(--primary);
-        }
-
+   .logo img{
+    height: 40px;
+   }
         .highlight {
             color: var(--primary);
         }
@@ -1174,10 +1146,7 @@ footer {
             color: var(--primary);
         }
 
-        .logo{
-            
-        }
-        
+      
         .hero-image:hover img {
             transform: scale(1.03);
         }
